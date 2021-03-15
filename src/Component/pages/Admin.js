@@ -29,11 +29,12 @@ function Admin() {
 
     return (
         <div>
-            <h1>WellCome To new Page</h1>
+            <h1>WellCome To Todo App</h1>
        
         <input placeholder="What is your task"/>
         <br/>
         <br/>
+        
 
 
 
