@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 
 
 function Login() {
 
-  const [user, setUser] = useState("")
-  const [password, setPassword] = useState("")
-  const [logged, setLogged] = useState(false)
-  const token = localStorage.getItem("token");
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+  const [logged, setLogged] = useState(false);
 
 
   const loggedIn = (e) => {
     e.preventDefault();
+    
     if(user === "rahul" && password === "password"){
 
       setLogged(true)
@@ -21,7 +21,7 @@ function Login() {
     localStorage.setItem("token","iloveindia")
 
   }
-if(logged == true){
+if(logged === true){
   return<Redirect to="/admin"/>
 }
     return (
