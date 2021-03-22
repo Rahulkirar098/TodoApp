@@ -9,6 +9,7 @@ function Login() {
   const [logged, setLogged] = useState(false);
 
 
+
   const loggedIn = (e) => {
     e.preventDefault();
     
@@ -17,14 +18,18 @@ function Login() {
       setLogged(true)
 
     }
+    else{
+      alert("enter correct password")
+    }
 
     localStorage.setItem("token","iloveindia")
 
   }
 if(logged === true){
-  return<Redirect to="/admin"/>
+  return<Redirect to="/admin"/> 
 }
     return (
+      <>
       <form onSubmit={(e)=>loggedIn(e)}>
 
       <h1>WellCome</h1>
@@ -44,6 +49,8 @@ if(logged === true){
           <button>Login</button>
 
       </form>
+      
+      </>
     )
 }
 
